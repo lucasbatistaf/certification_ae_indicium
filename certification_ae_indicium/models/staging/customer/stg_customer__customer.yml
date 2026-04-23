@@ -1,0 +1,21 @@
+models:
+  - name: stg_customer__customer
+    description: Customer data, one row per customer.
+    columns:
+      - name: customer_id
+        description: The unique key for each customer.
+        data_tests:
+          - not_null
+          - unique
+      - name: person_id
+        description: The unique key for each person, null if the customer is a store
+      - name: store_id
+        description: The unique key for each store, null if the customer is a person.
+      - name: account_number
+        description: The unique key for each customer on the account table.
+      - name: customer_type
+        description: Classification for the customer type. IN = Individual Customer and SC = Store Customer, if both exists the store is prioritize
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['IN', 'SC']

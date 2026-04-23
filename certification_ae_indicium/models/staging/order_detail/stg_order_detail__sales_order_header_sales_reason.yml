@@ -1,0 +1,12 @@
+models:
+  - name: stg_order_detail__sales_order_header_sales_reason
+    description: Orders and reason information.
+    columns:
+      - name: order_id
+        description: The key for each sale order.
+        data_tests:
+          - not_null
+      - name: reason_id
+        description: The key for each sale reason.
+        data_tests:
+          - not_null

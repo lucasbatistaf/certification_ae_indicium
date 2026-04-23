@@ -1,0 +1,11 @@
+models:
+  - name: stg_location__country_region
+    description: Country code and name.
+    columns:
+      - name: country_region_id
+        description: The unique key for each country.
+        data_tests:
+          - not_null
+          - unique
+      - name: country_name
+        description: Name of each country.

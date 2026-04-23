@@ -1,0 +1,19 @@
+models:
+  - name: stg_order_detail__sales_reason
+    description: Sales reason information.
+    columns:
+      - name: sales_reason_id
+        description: The unique key for each sale reason.
+        data_tests:
+          - not_null
+          - unique
+      - name: sales_reason_name
+        description: Sale reason name.
+        data_tests:
+          - not_null
+      - name: sales_reason_type
+        description: Sale reason type.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Marketing', 'Promotion', 'Other']

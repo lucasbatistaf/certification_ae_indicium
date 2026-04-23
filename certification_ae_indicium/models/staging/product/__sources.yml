@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: product
+    database: ae_indicium
+    schema: product
+    tables:
+      - name: product
+        description: Products information

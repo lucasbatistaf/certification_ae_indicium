@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: location
+    database: ae_indicium
+    schema: location
+    tables:
+      - name: address
+        description: Table containing address details
+      - name: countryregion
+        description: Table containing country regions details
+      - name: stateprovince
+        description: Table containing state provinces details

@@ -1,0 +1,47 @@
+models:
+  - name: stg_order_detail__sales_order_header
+    description: Customer data, one row per customer.
+    columns:
+      - name: order_id
+        description: The unique key for each order.
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: Customer id.
+        data_tests:
+          - not_null
+      - name: address_id
+        description: Address id.
+        data_tests:
+          - not_null
+      - name: credit_card_id
+        description: Credit card id.
+      - name: order_number
+        description: Order number id id.
+      - name: order_status
+        description: Order status id. 1 = In process; 2 = Approved; 3 = Backordered; 4 = Rejected; 5 = Shipped; 6 = Cancelled.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6]
+      - name: order_subtotal
+        description: Order subtotal.
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments: 
+                expression: "> 0"
+      - name: order_subtotal
+        description: Order subtotal.
+        data_tests:
+          - dbt_utils.expression_is_true:
+              arguments: 
+                expression: "> 0"
+      - name: order_freight
+        description: Order freight.
+      - name: order_total_due
+        description: Order total due.
+      - name: order_date
+        description: Order date.
+        data_tests:
+          - not_null
