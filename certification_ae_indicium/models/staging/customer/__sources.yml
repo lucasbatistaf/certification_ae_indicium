@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: customer
+    database: ae_indicium
+    tables:
+      - name: customer
+        description: Customer information
+      - name: person
+        description: People information
+      - name: store
+        description: Stores information

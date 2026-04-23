@@ -1,0 +1,23 @@
+name: certification_ae_indicium
+
+profile: certification_ae_indicium
+
+seed-paths: ["seeds"]
+model-paths: ["models"]
+macro-paths: ["macros"]
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+seeds:
+  # Builds seeds into '<your_schema_name>_raw'
+  certification_ae_indicium:
+    +schema: raw
+
+models:
+  certification_ae_indicium:
+    # Materialize staging models as views, and marts as tables
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

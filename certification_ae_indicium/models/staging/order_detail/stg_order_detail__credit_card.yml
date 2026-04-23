@@ -1,0 +1,13 @@
+models:
+  - name: stg_order_detail__credit_card
+    description: Credit card information.
+    columns:
+      - name: credit_card_id
+        description: The unique key for each credit card.
+        data_tests:
+          - not_null
+          - unique
+      - name: credit_card_type
+        description: The type of the credit card.
+        data_tests:
+          - not_null

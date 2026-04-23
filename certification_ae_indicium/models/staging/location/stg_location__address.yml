@@ -1,0 +1,17 @@
+models:
+  - name: stg_location__address
+    description: Addresses data, one row per customer.
+    columns:
+      - name: address_id
+        description: The unique key for each address.
+        data_tests:
+          - not_null
+          - unique
+      - name: city_name
+        description: The city for each address.
+        data_tests:
+          - not_null
+      - name: state_province_id
+        description: The state province id for each address.
+        data_tests:
+          - not_null

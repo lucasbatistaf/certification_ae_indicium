@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: orderdetail
+    database: ae_indicium
+    schema: orderdetail
+    tables:
+      - name: creditcard
+        description: Details about credit card
+      - name: salesorderdetail
+        description: Details about many information related to the orders
+      - name: salesorderheader
+        description: Details about many information related to the orders
+      - name: salesorderheadersalesreason
+        description: Contains ids for connecting two tables
+      - name: salesreason
+        description: Details about sales reasons

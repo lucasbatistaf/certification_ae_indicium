@@ -1,0 +1,15 @@
+models:
+  - name: stg_customer__person
+    description: People data, one row per person filtering only people who are Individual Negotiators (customers).
+    columns:
+      - name: person_id
+        description: The unique key for each person.
+        data_tests:
+          - not_null
+          - unique
+      - name: person_type
+        description: Person type
+        data_tests:
+          - not_null
+      - name: person_name
+        description: Person name.

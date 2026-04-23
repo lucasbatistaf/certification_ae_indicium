@@ -1,0 +1,13 @@
+models:
+  - name: stg_customer__store
+    description: Customer data with basic cleaning and transformation applied, one row per customer.
+    columns:
+      - name: store_id
+        description: The unique key for each store.
+        data_tests:
+          - not_null
+          - unique
+      - name: store_name
+        description: The unique key for each store
+        data_tests:
+          - not_null

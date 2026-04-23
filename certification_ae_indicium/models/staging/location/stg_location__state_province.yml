@@ -1,0 +1,12 @@
+models:
+  - name: stg_location__state_province
+    description: State province informatio.
+    columns:
+      - name: state_province_id
+        description: The unique key for each state province.
+        data_tests:
+          - not_null
+      - name: state_province_name
+        description: The unique name for each state province.
+      - name: country_region_id
+        description: The key for each country region.
