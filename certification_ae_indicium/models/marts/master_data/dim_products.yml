@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: "Customer dimension table with enriched state information and comprehensive business segmentation"
+
+    columns:
+      - name: product_id
+        description: Primary key for products table
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_name
+        description: Product name
+        data_tests:
+          - not_null
+
+      - name: product_number
+        description: Product serial number
+        data_tests:
+          - not_null

@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_dates
+    description: Dimension table containing dates from the date_seed.csv 
+
+    columns:
+      - name: date_id
+        description: Primary key for dates table
+        data_tests:
+          - unique
+          - not_null
+
+      - name: dates
+        description: Date for each row
+
+      - name: days
+        description: Day from each date
+
+      - name: months
+        description: Month from each date
+
+      - name: monthnames
+        description: Month name from each date
+
+      - name: years
+        description: Year from each date
+
+      - name: quarters
+        description: Quarter from each date 
+
+      - name: semesters
+        description: Semester from each date 
+
+      - name: weekdays
+        description: Weekday names from each date 

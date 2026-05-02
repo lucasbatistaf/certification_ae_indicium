@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: int_sales_reason_cross_joined_to_reasons
+    description: Cross join the sales reasons, for a maximun of three choices, unifying the ids, names and types
+    columns:
+      - name: sales_reason_id
+        description: Primary key
+      - name: sales_reason_name
+        description: Sales reason names
+      - name: sales_reason_type
+        description: Sales reason types

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_locations
+    description: Dimension table containing location data, including city, state and country
+
+    columns:
+      - name: address_id
+        description: Primary key for location table
+        data_tests:
+          - unique
+          - not_null
+
+      - name: city_name
+        description: City name for each address
+
+      - name: state_province_name
+        description: State/Province name for each address
+
+      - name: country_name
+        description: Country name for each address

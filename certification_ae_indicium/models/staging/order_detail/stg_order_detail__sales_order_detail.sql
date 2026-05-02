@@ -12,8 +12,8 @@ with
             , "Salesorderdetail.Salesorderdetailid" as order_detail_id
             , "Salesorderdetail.Productid" as product_id
             , "Salesorderdetail.Orderqty" as order_qty
-            , "Salesorderdetail.Unitprice" as unit_price
-            , "Salesorderdetail.Unitpricediscount" as unit_discount
+            ,  {{ round_float('"Salesorderdetail.Unitprice"') }} as unit_price
+            ,  {{ round_float('"Salesorderdetail.Unitpricediscount"') }} as unit_discount
         from {{ source('orderdetail', 'salesorderdetail') }}
     )
 

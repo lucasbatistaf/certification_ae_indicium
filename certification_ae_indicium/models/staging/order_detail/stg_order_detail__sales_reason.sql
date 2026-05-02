@@ -8,7 +8,7 @@ config(
 with 
     source as (
         select
-            "Salesreason.Salesreasonid" as sales_reason_id
+            "Salesreason.Salesreasonid"::integer as sales_reason_id
             , "Salesreason.Name" as sales_reason_name
             , "Salesreason.Reasontype" as sales_reason_type
         from {{ source('orderdetail', 'salesreason') }}
