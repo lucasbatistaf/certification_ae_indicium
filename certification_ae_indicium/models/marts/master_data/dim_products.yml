@@ -5,6 +5,12 @@ models:
     description: "Customer dimension table with enriched state information and comprehensive business segmentation"
 
     columns:
+      - name: surrogate_key
+        description: Surrogate key for products table
+        data_tests:
+          - unique
+          - not_null
+
       - name: product_id
         description: Primary key for products table
         data_tests:

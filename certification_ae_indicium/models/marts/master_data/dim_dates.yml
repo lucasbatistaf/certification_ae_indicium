@@ -5,6 +5,12 @@ models:
     description: Dimension table containing dates from the date_seed.csv 
 
     columns:
+      - name: surrogate_key
+        description: Surrogate key for date table
+        data_tests:
+          - unique
+          - not_null
+
       - name: date_id
         description: Primary key for dates table
         data_tests:

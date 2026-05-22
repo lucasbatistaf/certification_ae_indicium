@@ -5,6 +5,12 @@ models:
     description: Order detail dimension with enriched information about the orders
 
     columns:
+      - name: surrogate_key
+        description: Surrogate key for order details table
+        data_tests:
+          - unique
+          - not_null
+
       - name: order_id
         description: Primary key for order detail table
         data_tests:

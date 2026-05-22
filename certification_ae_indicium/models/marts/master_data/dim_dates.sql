@@ -14,7 +14,7 @@ with
 select
     md5(date_id) as surrogate_key
     , date_id
-    , dates::date
+    , dates
     , days
     , months
     , monthnames

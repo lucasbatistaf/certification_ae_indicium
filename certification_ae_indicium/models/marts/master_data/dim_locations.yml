@@ -5,6 +5,12 @@ models:
     description: Dimension table containing location data, including city, state and country
 
     columns:
+      - name: surrogate_key
+        description: Surrogate key for locations table
+        data_tests:
+          - unique
+          - not_null
+
       - name: address_id
         description: Primary key for location table
         data_tests:
