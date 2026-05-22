@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: dim_order_details
+    description: Order detail dimension with enriched information about the orders
+
+    columns:
+      - name: surrogate_key
+        description: Surrogate key for order details table
+        data_tests:
+          - unique
+          - not_null
+
+      - name: order_id
+        description: Primary key for order detail table
+        data_tests:
+          - unique
+          - not_null
+
+      - name: order_status
+        description: Order status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['In process', 'Approved', 'Backordered', 'Rejected', 'Shipped', 'Cancelled']
+
+      - name: credit_card_type
+        description: Person unique ID
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['ColonialVoice', 'Distinguish', 'Vista', 'SuperiorCard']
+
+      - name: sales_reason_name
+        description: Name of reason a person bought the product, if null 'No reason'
+        data_tests:
+          - not_null
+
+      - name: sales_reason_type
+        description: Type of reason a person bought the product, if null 'No reason'
+        data_tests:
+          - not_null

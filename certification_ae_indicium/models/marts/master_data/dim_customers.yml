@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Customer dimension table with enriched state information and comprehensive business segmentation"
+
+    columns:
+      - name: surrogate_key
+        description: Surrogate key for customer table
+        data_tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: Primary key for customer table
+        data_tests:
+          - unique
+          - not_null
+
+      - name: person_type
+        description: Person type, IN = Individual (retail) customer and SC = Store Contact
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['IN', 'SC']
+
+      - name: person_id
+        description: Person unique ID
+        data_tests:
+          - not_null
+
+      - name: person_name
+        description: Customer full name
+        data_tests:
+          - not_null
+
+      - name: store_id
+        description: ID of the store. Null if customer is a IN
+
+      - name: store_name
+        description: Name of the store. Null if customer is a IN

@@ -5,8 +5,9 @@ models:
       - name: order_id
         description: The key for each sale order.
         data_tests:
+          - unique
           - not_null
       - name: reason_id
-        description: The key for each sale reason.
+        description: The key for each sale reason. The ids are concat together, for later join with sales reason unifying the reasons in a unique line
         data_tests:
           - not_null
